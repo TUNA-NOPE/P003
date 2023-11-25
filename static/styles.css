@@ -212,3 +212,8 @@ body[lang="he"] {
 }
 
 
+.icons-container {
+  display: flex;
+  justify-content: space-around; /* Adjust as needed */
+  margin-bottom: 20px; /* Add space between icons and heading */
+}
