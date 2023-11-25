@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="he">
+
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap">
+</head>
+
+
+<body>
+    
+    <div class="container">
+        <h1>Attendance Management System</h1>
+
+        <!-- Class Selection Dropdown -->
+        <label for="classDropdown" class="visually-hidden">Select Class:</label>
+        <select id="classDropdown" aria-label="Select Class" required>
+            <option value="" disabled selected>Select a class</option>
+            <!-- Options will be populated dynamically via JavaScript -->
+        </select>
+      
+        <!-- Student Selection Dropdown -->
+        <label for="studentDropdown"><span id="studentLabel">Select Student:</span></label>
+        <select id="studentDropdown" aria-label="Select Student" required>
+            <option value="" disabled selected>Select a student</option>
+            <!-- Options will be populated dynamically via JavaScript -->
+        </select>
+
+        <!-- Attendance Status Dropdown -->
+        <label for="attendanceStatus">Attendance Status:</label>
+        <select id="attendanceStatus" aria-label="Attendance Status" required>
+            <option value="" disabled selected>Select attendance status</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+        
+
+        <!-- Update Button -->
+        <button id="updateButton" aria-label="Update Attendance">Update Attendance</button>
+
+        <!-- Display Area for Messages or Results -->
+        <div id="messageArea" class="hidden" aria-live="polite" role="alert"></div>    
+        
+        <!-- Israeli Air Force Icon -->
+        <img src="https://upload.wikimedia.org/wikipedia/he/f/f0/IAF_New_Logo_2018.png" alt="Israeli Air Force Icon" class="iaf-icon">
+    </div>
+
+
+    
+
+
+    <!-- Add the language switch button to your HTML body -->
+    <button id="languageSwitchButton" aria-label="Switch Language">עברית / English</button>
+
+
+</body>
+</html>

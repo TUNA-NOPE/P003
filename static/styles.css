@@ -1,0 +1,214 @@
+/* Add this to the beginning of your CSS file */
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative; /* Ensure relative positioning for absolute positioning within the container */
+  max-width: 600px;
+  margin: 50px auto;
+  flex-direction: column; /* Stack child elements vertically */
+  display: flex;
+  
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #004481; /* IDF Blue color */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #004481; /* IDF Blue color */
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #004481; /* IDF Blue color */
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #004481; /* IDF Blue color */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #002b57; /* Darker shade on hover */
+}
+
+#messageArea {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.success {
+  background-color: #4CAF50; /* Green background for success */
+  color: white;
+}
+
+.error {
+  background-color: #f44336; /* Red background for error */
+  color: white;
+}
+
+
+#languageSwitchButton {
+  font-size: 16px; /* Adjust the font size for a larger button */
+  padding: 10px 20px; /* Adjust padding for a larger button */
+}
+
+.iaf-icon {
+  max-width: 150px; /* Adjust the maximum width as needed */
+  max-height: 150px; /* Adjust the maximum height as needed */
+  margin-top: 10px; /* Add space between the icon and the heading */
+  display: block; /* Ensure it behaves as a block element */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* RTL styling for labels, select, and buttons */
+body[lang="he"] label,
+body[lang="he"] select,
+body[lang="he"] button {
+  text-align: right;
+}
+
+/* RTL styling for the message area */
+body[lang="he"] #messageArea {
+  text-align: right;
+}
+
+/* Ensure that dropdown options are right-to-left */
+body[lang="he"] select,
+body[lang="he"] select option {
+  direction: rtl;
+}
+
+/* Forcing the select dropdown arrow to the left side */
+body[lang="he"] select::-ms-expand {
+  display: none;
+}
+
+body[lang="he"] select {
+  background-position: left center;
+  background-repeat: no-repeat;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+
+body[lang="he"] {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  text-align: right;
+  font-family: 'Arial', sans-serif;
+  font-family: 'David Libre', 'Arial', sans-serif; /* Use a Hebrew font, fallback to Arial if not available */
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens in RTL mode */
+  body[lang="he"] label,
+  body[lang="he"] select,
+  body[lang="he"] button {
+    text-align: center; /* Center-align in smaller screens for better readability */
+  }
+  .container {
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+
+  }
+  
+  h1 {
+    font-size: 1.8em; /* Increase heading font size for smaller screens */
+    margin-bottom: 15px; /* Add more margin for better separation */
+  }
+  label {
+    font-size: 18px; /* Adjust label font size for smaller screens */
+    margin-bottom: 5px; /* Reduce margin for better spacing */
+  }
+  select {
+    margin-bottom: 25px; /* Reduce margin for better spacing */
+  }
+  button {
+    padding: 15px 20px; /* Increase padding for better touch interaction */
+  }
+  #messageArea {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    width: 100%; /* Make it full-width */
+    box-sizing: border-box; /* Include padding in the width */
+  }
+  #languageSwitchButton {
+    font-size: 16px;
+    position: static; /* Reset positioning for small screens */
+    margin-top: 10px; /* Add space between icon and language switch button on small screens */    padding: 10px 20px;
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
+
